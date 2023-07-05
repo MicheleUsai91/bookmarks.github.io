@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const bookmarkLink = document.createElement('a');
                 bookmarkLink.href = bookmark.link;
                 bookmarkLink.textContent = bookmark.name;
+                bookmarkLink.target = "_blank";
                 bookmarkItem.appendChild(bookmarkLink);
                 categoryList.appendChild(bookmarkItem);
             }
