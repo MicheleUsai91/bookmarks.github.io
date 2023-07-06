@@ -1,3 +1,42 @@
 html {
     font: 18px/1 'Open Sans', monospace;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    font-weight: bold;
+}
+
+hr {
+    border-top: 2px solid black;
+}
