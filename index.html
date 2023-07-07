@@ -9,8 +9,14 @@
         <link rel="icon" href="./Bookmarks.svg">
     </head>
     <body>
-        <div id="bookmarks_list">
+        <div id="menu">
             <h2 onclick="openLinks()">START</h2>
+            <br>
+            <h2 onclick="showAccordion('bookmarks_list')">BOOKMARKS</h2>
+            <br>
+            <h2 onclick="showAccordion('reminders_list')">REMINDERS</h2>
         </div>
+        <div id="bookmarks_list"></div>
+        <div id="reminders_list" hidden></div>
     </body>
 </html>

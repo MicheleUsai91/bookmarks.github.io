@@ -1,22 +1,18 @@
 html {
     font: 18px/1 'Open Sans', monospace;
-}
-
-body {
-    display: flex;
+    font-weight: lighter;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
 }
 
 div {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    max-width: fit-content;
 }
 
 h1, h2 {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: auto;
     cursor: pointer;
 }
 
@@ -39,4 +35,25 @@ a:focus, a:hover {
 
 hr {
     border-top: 2px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody th {
+    font-weight: normal;
+}
+
+tr {
+    vertical-align: top;
+}
+
+th, td {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    white-space: nowrap;
 }

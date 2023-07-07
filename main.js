@@ -114,6 +114,40 @@ const BOOKMARKS = {
     ]
 }
 
+const REMINDERS = {
+    "Carte" : [
+        {"title" : "Banco Posta", "data" : "2025-08-01"},
+        {"title" : "Carta D'Identità", "data" : "2032-07-15"},
+        {"title" : "Passaporto", "data" : "2033-04-06"},
+        {"title" : "Patente", "data" : "2023-07-15"},
+        {"title" : "Poste Pay", "data" : "2026-05-01"},
+        {"title" : "Tessera Sanitaria", "data" : "2028-01-12"}
+    ],
+    "Compleanno" : [
+        {"title" : "Anna Rita Sanna", "data" : "1959-03-12"},
+        {"title" : "Antonella Sanna", "data" : "1956-04-18"},
+        {"title" : "Elisa Raga", "data" : "2000-08-31"},
+        {"title" : "Luca Lecis", "data" : "1991-02-13"},
+        {"title" : "Michele Usai", "data" : "1991-07-15"}
+    ],
+    "Fisco" : [
+        {"title" : "730", "data" : "2024-06-16"}
+    ],
+    "Macchina" : [
+        {"title" : "Assicurazione", "data" : "2023-07-13"},
+        {"title" : "Bollo", "data" : "2023-12-01"},
+        {"title" : "Revisione", "data" : "2025-05-01"}
+    ],
+    "Poste" : [
+        {"title" : "Firma", "data" : "2025-06-17"},
+        {"title" : "PEC", "data" : "2024-01-05"},
+        {"title" : "SPID", "data" : "2023-06-30"}
+    ],
+    "Salute" : [
+        {"title" : "Certificato Medico", "data" : "2024-07-13"}
+    ],
+}
+
 function openAllPagesByName(name) {
     openUrls(getLinksList(document.getElementsByName(name)));
 }
@@ -137,22 +171,36 @@ function getLinksList(array) {
     return linksList;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('bookmarks_list');
+function showAccordion(value) {
+    document.getElementById(value).hidden = !document.getElementById(value).hidden;
+}
+
+function dateDiff(date) {
+    const currentDate = new Date();
+    const parsedDate = new Date(date);
+    return [
+        currentDate.getFullYear() - parsedDate.getFullYear(),
+        currentDate.getMonth() - parsedDate.getMonth(),
+        currentDate.getDate() - parsedDate.getDate()
+    ];
+}
+
+function showBookmarks() {
+    const container = document.getElementById("bookmarks_list");
 
     for (const category in BOOKMARKS) {
         if (BOOKMARKS.hasOwnProperty(category)) {
-            const categoryList = document.createElement('ul');
-            const categoryTitle = document.createElement('h2');
-            const line = document.createElement('hr');
+            const categoryList = document.createElement("ul");
+            const categoryTitle = document.createElement("h2");
+            const line = document.createElement("hr");
             categoryTitle.textContent = category.toUpperCase();
             categoryTitle.setAttribute("onclick", "openAllPagesByName('" + category.toUpperCase() + "')");
             categoryList.appendChild(categoryTitle);
             categoryList.appendChild(line);
-            const BOOKMARKSArray = BOOKMARKS[category];
-            for (const bookmark of BOOKMARKSArray) {
-                const bookmarkItem = document.createElement('li');
-                const bookmarkLink = document.createElement('a');
+
+            for (const bookmark of BOOKMARKS[category]) {
+                const bookmarkItem = document.createElement("li");
+                const bookmarkLink = document.createElement("a");
                 bookmarkLink.href = bookmark.link;
                 bookmarkLink.textContent = bookmark.name;
                 bookmarkLink.target = "_blank";
@@ -163,4 +211,71 @@ document.addEventListener('DOMContentLoaded', function () {
             container.appendChild(categoryList);
         }
     }
+}
+
+function showReminders() {
+    const container = document.getElementById("reminders_list");
+    
+    for (const category in REMINDERS) {
+        if (REMINDERS.hasOwnProperty(category)) {
+            const categoryList = document.createElement("ul");
+            const categoryTitle = document.createElement("h2");
+            const line = document.createElement("hr");
+            categoryTitle.textContent = category.toUpperCase();
+            categoryList.appendChild(categoryTitle);
+            categoryList.appendChild(line);
+
+            const table = document.createElement("table");
+            const head = document.createElement("thead");
+            const headRow = document.createElement("tr");
+            const body = document.createElement("tbody");
+
+            const headTitle = document.createElement("th");
+            headTitle.textContent = "DESCRIZIONE";
+            headRow.appendChild(headTitle);
+
+            const headDate = document.createElement("th");
+            headDate.textContent = "DATA";
+            headRow.appendChild(headDate);
+
+            const headResult = document.createElement("th");
+            headResult.textContent = category.toUpperCase() === "COMPLEANNO" ? "ETA" : "COUNTDOWN";
+            headRow.appendChild(headResult);
+
+            head.appendChild(headRow);
+            table.appendChild(head);
+
+            for (const reminder of REMINDERS[category]) {
+                const bodyRow = document.createElement("tr");
+
+                const bodyTitle = document.createElement("th");
+                bodyTitle.textContent = reminder.title;
+                bodyRow.appendChild(bodyTitle);
+    
+                const bodyDate = document.createElement("th");
+                bodyDate.textContent = reminder.data;
+                bodyRow.appendChild(bodyDate);
+    
+                const bodyResult = document.createElement("th");
+                let data = dateDiff(reminder.data);
+                for (var i=0; i<data.length; i++) {
+                    data[i] = Math.abs(data[i]) < 10 ? "0" + Math.abs(data[i]) : Math.abs(data[i])
+                }
+
+                //TO-DO -> trasformare la riga in una sotto tabella
+                bodyResult.textContent = "Y " + data[0] + " | M " + data[1] + " | D " + data[2];
+                bodyRow.appendChild(bodyResult);
+
+                body.appendChild(bodyRow);
+            }
+            table.appendChild(body);
+            categoryList.appendChild(table);
+            container.appendChild(categoryList);
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    showBookmarks();
+    showReminders();
 })
