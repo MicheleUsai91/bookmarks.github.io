@@ -10,13 +10,13 @@
     </head>
     <body>
         <div id="menu">
-            <h2 onclick="openLinks()">START</h2>
-            <br>
-            <h2 onclick="showAccordion('bookmarks_list')">BOOKMARKS</h2>
-            <br>
-            <h2 onclick="showAccordion('reminders_list')">REMINDERS</h2>
+            <h3 onclick="openLinks()">START</h3>
+            <h3 onclick="showAccordion('bookmarks_list')">BOOKMARKS</h3>
+            <h3 onclick="showAccordion('reminders_list')">REMINDERS</h3>
         </div>
-        <div id="bookmarks_list"></div>
-        <div id="reminders_list" hidden></div>
+        <div class="wrapper">
+            <div id="bookmarks_list"></div>
+            <div id="reminders_list" hidden></div>
+        </div>
     </body>
 </html>

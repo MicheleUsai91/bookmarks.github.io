@@ -10,18 +10,29 @@ div {
     max-width: fit-content;
 }
 
-h1, h2 {
+h2, caption {
     text-align: center;
+    text-transform: uppercase;
     margin: auto;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+h3 {
+    text-align: center;
+    margin: 10px;
     cursor: pointer;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
     text-align: left;
     border: 2px solid black;
     padding: 10px;
+    margin: 10px;
 }
 
 a {
@@ -33,14 +44,14 @@ a:focus, a:hover {
     font-weight: bold;
 }
 
-hr {
-    border-top: 2px solid black;
+table {
+    width: 100%;
+    text-align: left;
 }
 
-table {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 100%;
+thead th {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 tbody th {
@@ -51,9 +62,39 @@ tr {
     vertical-align: top;
 }
 
+tr:nth-of-type(2n) {
+    background: rgb(240, 240,240);
+}
+
 th, td {
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 10px;
+    padding: auto;
     white-space: nowrap;
+}
+
+#menu {
+    display: flex;
+}
+
+.wrapper {
+    width: min(900px, 100% - 3rem);
+    margin-inline: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 650px) {
+    th {
+        display: none;
+    }
+    
+    td {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 5ch auto;
+    }
+
+    td::before {
+        content: attr(data-cell);
+        font-weight: bold;
+        text-transform: capitalize;
+    }
 }
