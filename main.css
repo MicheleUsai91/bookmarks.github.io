@@ -71,7 +71,7 @@ th, td {
     white-space: nowrap;
 }
 
-#menu {
+.menu {
     display: flex;
 }
 
