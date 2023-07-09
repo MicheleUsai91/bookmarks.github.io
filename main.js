@@ -250,10 +250,11 @@ function showReminders() {
         const body = document.createElement("tbody");
 
         REMINDERS[reminder].forEach(r => {
-            let data = dateDiff(r.data).map(value => Math.abs(value) < 10 ? "0" + Math.abs(value) : Math.abs(value));
+            let data = dateDiff(r.data).map(value => Math.abs(value) < 10 ? "0" + Math.abs(value) : "" + Math.abs(value));
             const bodyRow = document.createElement("tr");
             col.forEach(c => {
                 const cell = document.createElement("td");
+                if(data[0] + data[1] === "0000" && data[2] <= 7) cell.style.color = "red";
                 cell.textContent = c !== "Y-M-D" ? r[c.toLowerCase()] : `${data[0]} - ${data[1]} - ${data[2]}`;
                 cell.setAttribute("data-cell", c);
                 bodyRow.appendChild(cell);
