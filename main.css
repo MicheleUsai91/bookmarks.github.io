@@ -86,9 +86,14 @@ th, td {
     border: 2px solid black;
 }
 
+@media (max-width: 1080px) {
+    .grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
 @media (max-width: 650px) {
     .grid {
-        display: grid;
         grid-template-columns: repeat(1,minmax(0,1fr));
     }
     
