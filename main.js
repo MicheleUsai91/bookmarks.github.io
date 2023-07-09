@@ -254,7 +254,10 @@ function showReminders() {
             const bodyRow = document.createElement("tr");
             col.forEach(c => {
                 const cell = document.createElement("td");
-                if(data[0] + data[1] === "0000" && data[2] <= 7) cell.style.color = "red";
+                if(data[0] + data[1] === "0000" && data[2] <= 7) {
+                    cell.style.color = "red";
+                    cell.style.fontWeight = "bold";
+                }
                 cell.textContent = c !== "Y-M-D" ? r[c.toLowerCase()] : `${data[0]} - ${data[1]} - ${data[2]}`;
                 cell.setAttribute("data-cell", c);
                 bodyRow.appendChild(cell);
