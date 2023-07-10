@@ -10,18 +10,21 @@ const BOOKMARKS = {
         { "name": "onedrive", "link": "https://onedrive.live.com" }
     ],
     "manga": [
+        { "name": "a story about a grandpa & granma", "link": "https://mangakatana.com/manga/a-story-about-a-grandpa-and-grandma-who-returned-back-to-their-youth.23710" },
         { "name": "bakemonogatari", "link": "https://mangakatana.com/manga/bakemonogatari-nishio-ishin.20047" },
-        // {"name" : "baki-dou (2018)", "link" : "https://mangakatana.com/manga/baki-dou-2018.21422"},
         { "name": "berserk", "link": "https://mangakatana.com/manga/berserk.1087" },
         { "name": "boku no hero academia", "link": "https://mangakatana.com/manga/boku-no-hero-academia.551" },
         { "name": "chainsaw man", "link": "https://mangakatana.com/manga/chainsaw-man.21890" },
         { "name": "guard pass", "link": "https://mangakatana.com/manga/guard-pass.25929" },
+        { "name": "hundred ghost stories", "link": "https://mangakatana.com/manga/hundred-ghost-stories-of-my-own-death.26032" },
         { "name": "juujika no rokunin", "link": "https://mangakatana.com/manga/juujika-no-rokunin.25073" },
         { "name": "kengan omega", "link": "https://mangakatana.com/manga/kengan-omega.22093" },
         { "name": "made in abyss", "link": "https://mangakatana.com/manga/made-in-abyss.1224" },
         { "name": "nagatoro", "link": "https://mangakatana.com/manga/please-dont-bully-me-nagatoro.19551" },
         { "name": "onepunch-man", "link": "https://mangakatana.com/manga/onepunch-man.437" },
-        { "name": "sakamoto days", "link": "https://mangakatana.com/manga/sakamoto-days.25740" }
+        { "name": "sakamoto days", "link": "https://mangakatana.com/manga/sakamoto-days.25740" },
+        { "name": "under ninja", "link": "https://mangakatana.com/manga/under-ninja.21115" }
+
     ],
     "p2p": [
         { "name": "fitgirl", "link": "https://www.1377x.to/user/fitgirl" },
