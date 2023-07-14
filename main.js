@@ -123,7 +123,7 @@ const REMINDERS = {
         { "desc": "banco posta", "data": "2025-08-01" },
         { "desc": "carta d'identità", "data": "2032-07-15" },
         { "desc": "passaporto", "data": "2033-04-06" },
-        { "desc": "patente", "data": "2023-07-15" },
+        { "desc": "patente", "data": "2033-07-15" },
         { "desc": "poste pay", "data": "2026-05-01" },
         { "desc": "tessera sanitaria", "data": "2028-01-12" }
     ],
@@ -138,7 +138,7 @@ const REMINDERS = {
         { "desc": "730", "data": "2024-06-16" }
     ],
     "macchina": [
-        { "desc": "assicurazione", "data": "2023-07-13" },
+        { "desc": "assicurazione", "data": "2024-07-13" },
         { "desc": "bollo", "data": "2023-12-01" },
         { "desc": "revisione", "data": "2025-05-01" }
     ],
@@ -148,7 +148,7 @@ const REMINDERS = {
         { "desc": "spid", "data": "2023-06-30" }
     ],
     "salute": [
-        { "desc": "certificato medico", "data": "2024-07-13" }
+        { "desc": "certificato medico", "data": "2024-07-12" }
     ],
 }
 
