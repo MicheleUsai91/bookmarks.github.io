@@ -144,11 +144,12 @@ const REMINDERS = {
     ],
     "poste": [
         { "desc": "firma", "data": "2025-06-17" },
-        { "desc": "pec", "data": "2024-01-05" },
-        { "desc": "spid", "data": "2023-06-30" }
+        { "desc": "pec", "data": "2024-01-05" }
     ],
     "salute": [
-        { "desc": "certificato medico", "data": "2024-07-12" }
+        { "desc": "certificato medico", "data": "2024-07-12" },
+        { "desc": "palestra annuale", "data": "2024-07-13" },
+        { "desc": "palestra entrate", "data": "2023-09-13" }
     ],
 }
 
