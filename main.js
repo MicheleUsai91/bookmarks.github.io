@@ -23,6 +23,7 @@ const BOOKMARKS = {
         { "name": "nagatoro", "link": "https://mangakatana.com/manga/please-dont-bully-me-nagatoro.19551" },
         { "name": "onepunch-man", "link": "https://mangakatana.com/manga/onepunch-man.437" },
         { "name": "sakamoto days", "link": "https://mangakatana.com/manga/sakamoto-days.25740" },
+        { "name": "senpai ga urusai kouhai no hanashi", "link": "https://mangakatana.com/manga/senpai-ga-urusai-kouhai-no-hanashi.20036" },
         { "name": "under ninja", "link": "https://mangakatana.com/manga/under-ninja.21115" }
 
     ],
@@ -122,6 +123,7 @@ const REMINDERS = {
     "carte": [
         { "desc": "banco posta", "data": "2025-08-01" },
         { "desc": "carta d'identità", "data": "2032-07-15" },
+        { "desc": "ctm", "data": "2024-07-01" },
         { "desc": "passaporto", "data": "2033-04-06" },
         { "desc": "patente", "data": "2033-07-15" },
         { "desc": "poste pay", "data": "2026-05-01" },
