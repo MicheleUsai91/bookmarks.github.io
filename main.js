@@ -25,7 +25,6 @@ const BOOKMARKS = {
         { "name": "sakamoto days", "link": "https://mangakatana.com/manga/sakamoto-days.25740" },
         { "name": "senpai ga urusai kouhai no hanashi", "link": "https://mangakatana.com/manga/senpai-ga-urusai-kouhai-no-hanashi.20036" },
         { "name": "under ninja", "link": "https://mangakatana.com/manga/under-ninja.21115" }
-
     ],
     "p2p": [
         { "name": "fitgirl", "link": "https://www.1377x.to/user/fitgirl" },
@@ -71,7 +70,6 @@ const BOOKMARKS = {
     ],
     "tools": [
         { "name": "chat-gpt", "link": "https://chat.openai.com" },
-        // {"name" : "clean installation", "link" : "c:/users/michele/documents/programmazione/code/webapp/cleaninstall/cleaninstall.html"},
         { "name": "exrx", "link": "https://exrx.net" },
         { "name": "github", "link": "https://github.com" },
         { "name": "hexed", "link": "https://hexed.it" },
@@ -116,6 +114,46 @@ const BOOKMARKS = {
         { "name": "stuff made here", "link": "https://www.youtube.com/@stuffmadehere" },
         { "name": "techquickie", "link": "https://www.youtube.com/@techquickie" },
         { "name": "veritasium", "link": "https://www.youtube.com/@veritasium" }
+    ]
+}
+
+const NEWS  = {
+    "economy": [
+        { "name": "bloomberg", "link": "https://www.bloomberg.com/europe" },
+        { "name": "market watch", "link": "https://www.marketwatch.com" },
+        { "name": "the economist", "link": "https://www.economist.com" }
+    ],
+    "magazine": [
+        { "name": "palladium magazine", "link": "https://www.palladiummag.com" },
+        { "name": "time", "link": "https://time.com" }
+        
+    ],
+    "sardegna": [
+        { "name": "ansa sardegna", "link": "https://www.ansa.it/sardegna" },
+        { "name": "casteddu online", "link": "https://www.castedduonline.it" },
+        { "name": "l'Unione sarda", "link": "https://www.unionesarda.it" },
+        { "name": "la nuova sardegna", "link": "https://www.lanuovasardegna.it" }
+    ],
+    "science": [
+        { "name": "live science", "link": "https://www.livescience.com" },
+        { "name": "new scientist", "link": "https://www.newscientist.com" },
+        { "name": "phys org", "link": "https://phys.org" },
+        { "name": "scientific american", "link": "https://www.scientificamerican.com" },
+        { "name": "science news", "link": "https://www.sciencenews.org" }
+    ],
+    "tech": [
+        { "name": "libgen", "link": "https://libgen.is" },
+        { "name": "hacker news", "link": "https://news.ycombinator.com" },
+        { "name": "tech crunch", "link": "https://techcrunch.com" },
+        { "name": "wired", "link": "https://www.wired.com" }
+    ],
+    "world": [
+        { "name": "associated press", "link": "https://apnews.com" },
+        { "name": "reuters", "link": "https://www.reuters.com" },
+        { "name": "the guardian", "link": "https://www.theguardian.com/international" },
+        { "name": "the new york times", "link": "https://www.nytimes.com/international" },
+        { "name": "the times", "link": "https://www.thetimes.co.uk" },
+        { "name": "wall street journal", "link": "https://www.wsj.com" }
     ]
 }
 
@@ -184,7 +222,10 @@ function getLinksList(array) {
 }
 
 function showAccordion(value) {
-    document.getElementById(value).hidden = !document.getElementById(value).hidden;
+    const accordions = ["bookmarks_list", "reminders_list", "news_list"];
+    accordions.forEach(a => {
+        document.getElementById(a).hidden = a !== value;
+    })
 }
 
 function dateDiff(date) {
@@ -197,35 +238,35 @@ function dateDiff(date) {
     ];
 }
 
-function showBookmarks() {
-    const bookmarks = document.getElementById("bookmarks_list");
+function showGrid(group, json) {
+    const section = document.getElementById(group);
     const gridDiv = document.createElement("div");
     gridDiv.setAttribute("class", "grid");
-    Object.keys(BOOKMARKS).forEach(bookmark => {
-        const bookmarkDiv = document.createElement("div");
-        bookmarkDiv.setAttribute("class", "cell");
-        const bookmarkTitle = document.createElement("h2");
-        const bookmarkList = document.createElement("ul");
+    Object.keys(json).forEach(j => {
+        const sectionDiv = document.createElement("div");
+        sectionDiv.setAttribute("class", "cell");
+        const sectionTitle = document.createElement("h2");
+        const sectionList = document.createElement("ul");
 
-        bookmarkTitle.textContent = bookmark;
-        bookmarkTitle.setAttribute("onclick", `openAllPagesByName('${bookmark.toUpperCase()}')`);
-        bookmarkDiv.appendChild(bookmarkTitle);
+        sectionTitle.textContent = j;
+        sectionTitle.setAttribute("onclick", `openAllPagesByName('${j.toUpperCase()}')`);
+        sectionDiv.appendChild(sectionTitle);
 
-        BOOKMARKS[bookmark].forEach(b => {
-            const bookmarkItem = document.createElement("li");
-            const bookmarkLink = document.createElement("a");
+        json[j].forEach(a => {
+            const sectionItem = document.createElement("li");
+            const sectionLink = document.createElement("a");
 
-            bookmarkLink.href = b.link;
-            bookmarkLink.textContent = b.name;
-            bookmarkLink.target = "_blank";
-            bookmarkLink.setAttribute("name", bookmark.toUpperCase());
+            sectionLink.href = a.link;
+            sectionLink.textContent = a.name;
+            sectionLink.target = "_blank";
+            sectionLink.setAttribute("name", j.toUpperCase());
 
-            bookmarkItem.appendChild(bookmarkLink);
-            bookmarkList.appendChild(bookmarkItem);
-            bookmarkDiv.appendChild(bookmarkList);
+            sectionItem.appendChild(sectionLink);
+            sectionList.appendChild(sectionItem);
+            sectionDiv.appendChild(sectionList);
         });
-        gridDiv.appendChild(bookmarkDiv);
-        bookmarks.appendChild(gridDiv);
+        gridDiv.appendChild(sectionDiv);
+        section.appendChild(gridDiv);
     });
 }
 
@@ -277,6 +318,7 @@ function showReminders() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    showBookmarks();
+    showGrid("bookmarks_list", BOOKMARKS);
     showReminders();
+    showGrid("news_list", NEWS);
 })
