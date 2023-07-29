@@ -112,4 +112,17 @@ th, td {
         font-weight: bold;
         text-transform: capitalize;
     }
+    
+    .menu {
+        margin: auto;
+        max-width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .menu h3 {
+        flex: 1 0 50%;
+        box-sizing: border-box;
+        text-align: center;
+    }
 }
