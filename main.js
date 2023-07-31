@@ -142,7 +142,6 @@ const NEWS  = {
         { "name": "science news", "link": "https://www.sciencenews.org" }
     ],
     "tech": [
-        { "name": "libgen", "link": "https://libgen.is" },
         { "name": "hacker news", "link": "https://news.ycombinator.com" },
         { "name": "tech crunch", "link": "https://techcrunch.com" },
         { "name": "wired", "link": "https://www.wired.com" }
