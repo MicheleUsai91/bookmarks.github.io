@@ -24,7 +24,8 @@ const BOOKMARKS = {
         { "name": "onepunch-man", "link": "https://mangakatana.com/manga/onepunch-man.437" },
         { "name": "sakamoto days", "link": "https://mangakatana.com/manga/sakamoto-days.25740" },
         { "name": "senpai ga urusai kouhai no hanashi", "link": "https://mangakatana.com/manga/senpai-ga-urusai-kouhai-no-hanashi.20036" },
-        { "name": "under ninja", "link": "https://mangakatana.com/manga/under-ninja.21115" }
+        { "name": "under ninja", "link": "https://mangakatana.com/manga/under-ninja.21115" },
+        { "name": "yajin tensei", "link": "https://mangakatana.com/manga/yajin-tensei-karate-survivor-in-another-world.24947" }
     ],
     "p2p": [
         { "name": "fitgirl", "link": "https://www.1377x.to/user/fitgirl" },
@@ -48,7 +49,6 @@ const BOOKMARKS = {
         { "name": "devdocs", "link": "https://devdocs.io" },
         { "name": "fullstack", "link": "https://fullstackopen.com/en" },
         { "name": "must read books", "link": "https://www.reddit.com/r/learnprogramming/comments/83xyow/must_read_books" },
-        { "name": "palladium magazine", "link": "https://www.palladiummag.com" },
         { "name": "roadmap webdev", "link": "https://github.com/kamranahmedse/developer-roadmap" },
         { "name": "php the right way", "link": "https://phptherightway.com" }
     ],
@@ -101,7 +101,7 @@ const BOOKMARKS = {
         { "name": "youtube", "link": "https://www.youtube.com" },
         { "name": "dictionary of obscure sorrows", "link": "https://www.youtube.com/c/obscuresorrows" },
         { "name": "diy perks", "link": "https://www.youtube.com/@diyperks" },
-        { "name": "isaac arthur", "link": "https://www.youtube.com/@isaacarthur3209" },
+        { "name": "isaac arthur", "link": "https://www.youtube.com/@isaacarthurSFIA" },
         { "name": "jack pgm", "link": "https://www.youtube.com/@jackpgm" },
         { "name": "jerryrigeverything", "link": "https://www.youtube.com/@jerryrigeverything" },
         { "name": "kiwami japan", "link": "https://www.youtube.com/channel/ucg3qsvzheut5_cppcrtoajq" },
