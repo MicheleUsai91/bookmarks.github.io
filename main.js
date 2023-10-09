@@ -12,9 +12,11 @@ const BOOKMARKS = {
     "manga": [
         { "name": "a story about a grandpa & granma", "link": "https://mangakatana.com/manga/a-story-about-a-grandpa-and-grandma-who-returned-back-to-their-youth.23710" },
         { "name": "bakemonogatari", "link": "https://mangakatana.com/manga/bakemonogatari-nishio-ishin.20047" },
+        { "name": "baki rahen", "link": "https://mangakatana.com/manga/baki-rahen.27070" },
         { "name": "berserk", "link": "https://mangakatana.com/manga/berserk.1087" },
         { "name": "boku no hero academia", "link": "https://mangakatana.com/manga/boku-no-hero-academia.551" },
         { "name": "chainsaw man", "link": "https://mangakatana.com/manga/chainsaw-man.21890" },
+        { "name": "dai dark", "link": "https://mangakatana.com/manga/dai-dark.22430" },
         { "name": "guard pass", "link": "https://mangakatana.com/manga/guard-pass.25929" },
         { "name": "hundred ghost stories", "link": "https://mangakatana.com/manga/hundred-ghost-stories-of-my-own-death.26032" },
         { "name": "juujika no rokunin", "link": "https://mangakatana.com/manga/juujika-no-rokunin.25073" },
@@ -135,6 +137,7 @@ const NEWS  = {
         { "name": "la nuova sardegna", "link": "https://www.lanuovasardegna.it" }
     ],
     "science": [
+        { "name" : "big think", "link" : "https://bigthink.com/"},
         { "name": "live science", "link": "https://www.livescience.com" },
         { "name": "new scientist", "link": "https://www.newscientist.com" },
         { "name": "phys org", "link": "https://phys.org" },
