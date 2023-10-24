@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1f4f0;</text></svg>"><!--href="./Bookmarks.svg"-->
+</head>
+
+<body>
+    <div class="menu">
+        <h3 onclick="openLinks()">START</h3>
+        <h3><a href="index.html">BOOKMARKS</a></h3>
+        <h3 style="border-bottom: 2px solid black;"><a href="news.html">NEWS</a></h3>
+        <h3><a href="reminders.html">REMINDERS</a></h3>
+        <h3><a href="./workout.html">WORKOUT</a></h3>
+    </div>
+    <div class="grid">
+        <div class="cell">
+            <h2 onclick="openAllPagesByName('ECONOMY')">economy</h2>
+            <ul>
+                <li><a href="https://www.bloomberg.com/europe" target="_blank" name="ECONOMY">bloomberg</a></li>
+                <li><a href="https://www.marketwatch.com" target="_blank" name="ECONOMY">market watch</a></li>
+                <li><a href="https://www.economist.com" target="_blank" name="ECONOMY">the economist</a></li>
+            </ul>
+        </div>
+        <div class="cell">
+            <h2 onclick="openAllPagesByName('MAGAZINE')">magazine</h2>
+            <ul>
+                <li><a href="https://www.palladiummag.com" target="_blank" name="MAGAZINE">palladium magazine</a></li>
+                <li><a href="https://time.com" target="_blank" name="MAGAZINE">time</a></li>
+            </ul>
+        </div>
+        <div class="cell">
+            <h2 onclick="openAllPagesByName('SARDEGNA')">sardegna</h2>
+            <ul>
+                <li><a href="https://www.ansa.it/sardegna" target="_blank" name="SARDEGNA">ansa sardegna</a></li>
+                <li><a href="https://www.castedduonline.it" target="_blank" name="SARDEGNA">casteddu online</a></li>
+                <li><a href="https://www.unionesarda.it" target="_blank" name="SARDEGNA">l'Unione sarda</a></li>
+                <li><a href="https://www.lanuovasardegna.it" target="_blank" name="SARDEGNA">la nuova sardegna</a></li>
+            </ul>
+        </div>
+        <div class="cell">
+            <h2 onclick="openAllPagesByName('SCIENCE')">science</h2>
+            <ul>
+                <li><a href="https://bigthink.com/" target="_blank" name="SCIENCE">big think</a></li>
+                <li><a href="https://www.livescience.com" target="_blank" name="SCIENCE">live science</a></li>
+                <li><a href="https://www.newscientist.com" target="_blank" name="SCIENCE">new scientist</a></li>
+                <li><a href="https://phys.org" target="_blank" name="SCIENCE">phys org</a></li>
+                <li><a href="https://www.scientificamerican.com" target="_blank" name="SCIENCE">scientific american</a></li>
+                <li><a href="https://www.sciencenews.org" target="_blank" name="SCIENCE">science news</a></li>
+            </ul>
+        </div>
+        <div class="cell">
+            <h2 onclick="openAllPagesByName('TECH')">tech</h2>
+            <ul>
+                <li><a href="https://news.ycombinator.com" target="_blank" name="TECH">hacker news</a></li>
+                <li><a href="https://techcrunch.com" target="_blank" name="TECH">tech crunch</a></li>
+                <li><a href="https://www.wired.com" target="_blank" name="TECH">wired</a></li>
+            </ul>
+        </div>
+        <div class="cell">
+            <h2 onclick="openAllPagesByName('WORLD')">world</h2>
+            <ul>
+                <li><a href="https://apnews.com" target="_blank" name="WORLD">associated press</a></li>
+                <li><a href="https://www.reuters.com" target="_blank" name="WORLD">reuters</a></li>
+                <li><a href="https://www.theguardian.com/international" target="_blank" name="WORLD">the guardian</a></li>
+                <li><a href="https://www.nytimes.com/international" target="_blank" name="WORLD">the new york times</a></li>
+                <li><a href="https://www.thetimes.co.uk" target="_blank" name="WORLD">the times</a></li>
+                <li><a href="https://www.wsj.com" target="_blank" name="WORLD">wall street journal</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

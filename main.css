@@ -64,15 +64,25 @@ th, td {
     text-transform: capitalize;
 }
 
+input:not([type="radio"]) {
+    all: unset;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.result {
+    margin: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     margin: auto;
     max-width: fit-content;
-}
-
-.wrapper {
-    margin: 10px;
-    max-width: 100%;
 }
 
 .grid {
