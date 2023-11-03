@@ -7,7 +7,7 @@ function openLinks() {
         'https://web.whatsapp.com/', 
         'https://webmailbeta.aruba.it/', 
         'https://app.chime.aws/', 
-        'file:///C:/Users/Michele/Documents/Programmazione/Code/Public/bookmarks.github.io/index.html'
+        'file:///C:/Users/Usai9/Documents/Programmazione/Code/Public/bookmarks.github.io/index.html'
     ];
     openUrls(urls);
 }
