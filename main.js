@@ -4,9 +4,7 @@ function openAllPagesByName(name) {
 
 function openLinks() {
     const urls = [
-        'https://web.whatsapp.com/', 
-        'https://webmailbeta.aruba.it/', 
-        'https://app.chime.aws/', 
+        'https://web.whatsapp.com/',
         'file:///C:/Users/Usai9/Documents/Programmazione/Code/Public/bookmarks.github.io/index.html'
     ];
     openUrls(urls);
