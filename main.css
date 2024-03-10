@@ -80,9 +80,10 @@ input:not([type="radio"]) {
 }
 
 .menu {
-    display: flex;
     margin: auto;
     max-width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
 }
 
 .grid {
@@ -126,8 +127,7 @@ input:not([type="radio"]) {
     .menu {
         margin: auto;
         max-width: fit-content;
-        display: flex;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2,minmax(0,1fr));
     }
     
     .menu h3 {
